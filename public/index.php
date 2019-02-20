@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>MacBookPro</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1",shrink-to-fit=no">
+    <link rel="stylesheet" href="http://maxdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>MacBook Pro</title>
 </head>
-<br>
 <body>
-<div class="main">
-    <h1>More power.More performance.More pro.</h1>
-
+<h1>More power.More performance.More pro</h1>
 </body>
 </html>
+
 <?php
 /**
  * Created by PhpStorm.
@@ -24,6 +18,8 @@
  * Date: 2/18/19
  * Time: 11:49 PM
  */
+
+
 
 main::start("example.csv");
 class main  {
