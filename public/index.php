@@ -58,8 +58,6 @@ class html {
 
             }
             $count++;
-
-
         }
 
     }
@@ -117,7 +115,6 @@ class record {
 
         $array = (array) $this;
         return $array;
-    }
     public function createProperty($name = 'Inch', $value = '13') {
 
         $this->{$name} = $value;
