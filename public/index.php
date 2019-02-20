@@ -30,21 +30,45 @@ class main  {
 }
 class html {
     public static function generateTable($records) {
+
+        $html = '<table>';
         $count = 0;
         foreach ($records as $record) {
             if($count == 0) {
                 $array = $record->returnArray();
-                $fields = array_keys($array);
-                $values = array_values($array);
-                print_r($fields);
-                print_r($values);
+                //$fields = array_keys($array);
+                //$values = array_values($array);
+                $html .= '<tr>';
+                foreach($array as $key =>$value)
+                {
+                    $html .='<th>'.htmlspecialchars($key) . '</th>';
+                }
+                $html .='</tr>';
+
+                $html .='<tr>';
+                foreach($array as $key =>$value)
+                {
+                    $html .='<th>'.htmlspecialchars($value) . '</th>';
+                }
+                $html .='</tr>';
+
+                //print_r($fields);
+                //print_r($values);
             } else {
                 $array = $record->returnArray();
-                $values = array_values($array);
-                print_r($values);
+                //$values = array_values($array);
+                $html .='<tr>';
+                foreach($array as $key =>$value)
+                {
+                    $html .='<th>'.htmlspecialchars($value) . '</th>';
+                }
+                $html .='</tr>';
+                //print_r($values);
             }
             $count++;
         }
+        $html .='</table>';
+        echo $html;
     }
 }
 class csv {
