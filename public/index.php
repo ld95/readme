@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MacBookPro</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<br>
+<body>
+<div class="main">
+    <h1>More power.More performance.More pro.</h1>
+
+</body>
+</html>
 <?php
 /**
  * Created by PhpStorm.
@@ -15,11 +34,7 @@ class main {
         $records = csv::getRecords($filename);
         $table = html::generateTable($records);
 
-
     }
-
-
-
 
 }
 class html {
@@ -29,7 +44,7 @@ class html {
 
         foreach ($records as $record) {
             if($count == 0) {
-                $array = $record->returnArray();
+                $array = $record-> returnArray();
                 $fields = array_keys($array);
                 $values = array_values($array);
                 print_r($fields);
@@ -45,7 +60,6 @@ class html {
             $count++;
 
 
-            print_r($record);
         }
 
     }
@@ -94,7 +108,7 @@ class record {
             $this->createProperty($property, $value);
         }
 
-        print_r($this);
+
 
 
     }
@@ -104,7 +118,7 @@ class record {
         $array = (array) $this;
         return $array;
     }
-    public function createProperty($name = 'first', $value = 'Yansong') {
+    public function createProperty($name = 'Inch', $value = '13') {
 
         $this->{$name} = $value;
 
